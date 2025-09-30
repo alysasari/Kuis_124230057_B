@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-
+import 'package:flutter/material.dart' ;
 
 class DetailPage extends StatefulWidget {
   final String gameName;
@@ -49,10 +47,10 @@ class _DetailPageState extends State<DetailPage> {
         child: Column(
           children: [
             // Gambar sesuai menu
-            ClipRRect(
+           ClipRRect(
               borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                widget.gameImg, // gunakan gameImg dari DetailPage
+              child: Image.network(
+                widget.gameImg, // gunakan assets dari HomePage
                 height: 180,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -69,6 +67,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
 
             Row(
+            
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
